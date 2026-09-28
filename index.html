@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Himanshu Shakya — 3D Designer Portfolio</title>
+<meta name="description" content="Portfolio of Himanshu Shakya — 3D product designer, chandelier designer, architectural visualization and BIM artist.">
+<style>
+:root{--bg:#090909;--panel:#111;--text:#f4f4f4;--muted:#9b9b9b;--line:#252525;--accent:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}.wrap{max-width:1200px;margin:auto;padding:0 28px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(9,9,9,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;letter-spacing:.08em}.links{display:flex;gap:28px;font-size:14px;color:#bbb}.links a:hover{color:#fff}
+.hero{min-height:100vh;display:grid;place-items:center;padding-top:76px;background:radial-gradient(circle at 75% 35%,#242424 0,#111 22%,#090909 55%)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.2em;color:#888;font-size:12px}
+h1{font-size:clamp(52px,8vw,105px);line-height:.9;margin:18px 0 28px;letter-spacing:-.06em}.hero p{max-width:620px;color:#aaa;font-size:18px}
+.btns{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{padding:13px 20px;border:1px solid #444;border-radius:30px;font-size:14px}.btn.primary{background:#fff;color:#000;border-color:#fff}
+.visual{aspect-ratio:1/1;border-radius:28px;border:1px solid #292929;background:linear-gradient(145deg,#1d1d1d,#070707);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.visual:before{content:"";width:65%;height:65%;border:1px solid #555;border-radius:50%;box-shadow:0 0 80px #555;transform:rotate(25deg)}.visual:after{content:"3D";position:absolute;font-size:110px;font-weight:900;color:#fff1;letter-spacing:-.08em}
+section{padding:110px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px}.section-head h2{font-size:42px;margin:0;letter-spacing:-.04em}.section-head span{color:#777;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid var(--line);background:#0e0e0e;border-radius:18px;overflow:hidden}.thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#242424,#0c0c0c);display:grid;place-items:center;color:#777;font-size:12px;text-transform:uppercase;letter-spacing:.14em}.cardbody{padding:20px}.card h3{margin:0 0 6px;font-size:20px}.card p{margin:0;color:#888;font-size:14px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{border:1px solid #333;border-radius:30px;padding:10px 15px;color:#bbb;font-size:14px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px}.about h2{font-size:42px;margin-top:0}.about p{color:#aaa}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{padding:22px;border:1px solid var(--line);border-radius:16px}.fact strong{display:block;font-size:25px}.fact small{color:#777}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px}.contact h2{font-size:55px;line-height:1;margin:0}.contact p{color:#999}.contactbox{border:1px solid var(--line);border-radius:18px;padding:28px}.contactrow{padding:16px 0;border-bottom:1px solid #222}.contactrow:last-child{border:0}.label{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:#666}.value{margin-top:4px;color:#ddd}
+footer{padding:35px 0;color:#666;font-size:13px;display:flex;justify-content:space-between}
+@media(max-width:800px){.links{display:none}.hero-grid,.about,.contact{grid-template-columns:1fr}.hero{padding-top:110px}.grid{grid-template-columns:1fr}.visual{max-width:520px}.section-head{display:block}.section-head span{display:block;margin-top:8px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap navin"><a class="logo" href="#">HS / 3D</a><div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero"><div class="wrap hero-grid">
+<div><div class="eyebrow">3D Product Designer · Visual Artist</div>
+<h1>Designing<br>things that<br>stand out.</h1>
+<p>I’m Himanshu Shakya, a 3D designer focused on chandelier/product design, architectural visualization, realistic rendering and emerging BIM / digital-twin workflows.</p>
+<div class="btns"><a class="btn primary" href="#work">View my work</a><a class="btn" href="#contact">Contact me</a></div></div>
+<div class="visual"><span style="position:absolute;bottom:24px;left:24px;color:#777;font-size:12px">YOUR FEATURE IMAGE</span></div>
+</div></header>
+
+<section id="work"><div class="wrap"><div class="section-head"><h2>Selected Work</h2><span>Replace these placeholders with your renders</span></div>
+<div class="grid">
+<article class="card"><div class="thumb">Chandelier / Project 01</div><div class="cardbody"><h3>Custom Chandelier Design</h3><p>3D modeling, detailing, lighting and presentation renders.</p></div></article>
+<article class="card"><div class="thumb">Product / Project 02</div><div class="cardbody"><h3>Luxury Lighting Product</h3><p>Product visualization with materials, crystals and LED lighting.</p></div></article>
+<article class="card"><div class="thumb">Arch Viz / Project 03</div><div class="cardbody"><h3>Architectural Visualization</h3><p>Interior and exterior visualization with realistic lighting.</p></div></article>
+<article class="card"><div class="thumb">BIM / Project 04</div><div class="cardbody"><h3>BIM & Digital Twin</h3><p>Exploring Revit, VDC and digital-twin workflows for the built environment.</p></div></article>
+</div></div></section>
+
+<section id="about"><div class="wrap about"><div><div class="eyebrow">About</div><h2>From idea to 3D.</h2></div><div><p>I create 3D models and visualizations for products, lighting and architecture. My workflow combines design, modeling, materials, lighting and rendering to turn concepts into clear visual presentations.</p><div class="facts"><div class="fact"><strong>3D</strong><small>Modeling & visualization</small></div><div class="fact"><strong>Product</strong><small>Lighting & chandelier design</small></div><div class="fact"><strong>BIM</strong><small>Revit / VDC learning</small></div><div class="fact"><strong>Real-time</strong><small>D5 / Unreal workflows</small></div></div></div></div></section>
+
+<section id="skills"><div class="wrap"><div class="section-head"><h2>Skills</h2><span>Software & capabilities</span></div><div class="skills">
+<div class="skill">3ds Max</div><div class="skill">V-Ray</div><div class="skill">Corona Renderer</div><div class="skill">D5 Render</div><div class="skill">Revit</div><div class="skill">Rhino</div><div class="skill">Unreal Engine</div><div class="skill">3D Product Design</div><div class="skill">Chandelier Design</div><div class="skill">Architectural Visualization</div><div class="skill">BIM / VDC</div><div class="skill">Digital Twin</div>
+</div></div></section>
+
+<section id="contact"><div class="wrap contact"><div><div class="eyebrow">Let’s work together</div><h2>Have a project<br>in mind?</h2><p>Replace the details on the right with your actual contact information and portfolio links.</p></div>
+<div class="contactbox"><div class="contactrow"><div class="label">Email</div><div class="value">your.email@example.com</div></div><div class="contactrow"><div class="label">Location</div><div class="value">India</div></div><div class="contactrow"><div class="label">Portfolio / LinkedIn</div><div class="value">Add your link here</div></div><div class="contactrow"><div class="label">Instagram / Behance</div><div class="value">Add your link here</div></div></div></div></section>
+
+<footer><div>© 2026 Himanshu Shakya</div><div>3D · Product · Arch Viz · BIM</div></footer>
+</body>
+</html>
