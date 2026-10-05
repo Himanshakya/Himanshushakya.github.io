@@ -7,7 +7,7 @@
     <title>Himanshu Shakya | 3D Artist</title>
 
     <meta name="description"
-          content="Himanshu Shakya - 3D Artist, Product Designer, BIM, Digital Twin, Unreal Engine and 3ds Max Artist">
+          content="Himanshu Shakya - 3D Artist, Product Designer, BIM, Digital Twin and Unreal Engine Project Artist.">
 
     <style>
 
@@ -27,14 +27,19 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b0b0d;
+            background: #080808;
             color: #ffffff;
             line-height: 1.6;
         }
 
         a {
-            color: inherit;
             text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
         }
 
 
@@ -55,34 +60,32 @@
 
             padding: 20px 7%;
 
-            background: rgba(11,11,13,0.85);
-            backdrop-filter: blur(12px);
+            background: rgba(8, 8, 8, 0.92);
+            backdrop-filter: blur(10px);
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid #222;
         }
 
         .logo {
             font-size: 22px;
             font-weight: 700;
+            letter-spacing: 1px;
         }
 
-        .logo span {
-            color: #aaa;
-        }
-
-        nav ul {
+        .nav-links {
             display: flex;
             gap: 30px;
             list-style: none;
         }
 
-        nav ul li a {
-            color: #bbb;
+        .nav-links a {
+            color: #aaa;
+            font-size: 14px;
             transition: 0.3s;
         }
 
-        nav ul li a:hover {
-            color: white;
+        .nav-links a:hover {
+            color: #fff;
         }
 
 
@@ -96,43 +99,38 @@
             display: flex;
             align-items: center;
 
-            padding: 120px 7% 70px;
+            padding: 120px 7% 80px;
 
             background:
                 radial-gradient(
                     circle at 80% 30%,
-                    #292929 0%,
+                    rgba(255,255,255,0.08),
                     transparent 35%
-                ),
-                #0b0b0d;
+                );
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 850px;
         }
 
-        .small-title {
-            color: #aaa;
-            font-size: 15px;
+        .hero-small {
+            color: #999;
+            font-size: 14px;
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 20px;
         }
 
-        h1 {
-            font-size: clamp(55px, 9vw, 120px);
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 110px);
             line-height: 0.95;
             margin-bottom: 30px;
         }
 
-        h1 span {
-            color: #888;
-        }
-
-        .hero p {
-            max-width: 700px;
+        .hero-description {
+            max-width: 650px;
             color: #aaa;
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 35px;
         }
 
@@ -141,26 +139,36 @@
            BUTTONS
         ========================================================= */
 
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .button {
+        .btn {
             display: inline-block;
-            padding: 13px 25px;
+
+            padding: 13px 24px;
 
             border: 1px solid #555;
             border-radius: 30px;
 
+            margin-right: 10px;
+
+            font-size: 14px;
+
             transition: 0.3s;
         }
 
-        .button:hover {
-            background: white;
-            color: black;
-            border-color: white;
+        .btn:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: #fff;
         }
 
 
@@ -169,18 +177,17 @@
         ========================================================= */
 
         section {
-            padding: 100px 7%;
+            padding: 110px 7%;
         }
 
         .section-title {
-            font-size: 50px;
-            margin-bottom: 15px;
+            font-size: 42px;
+            margin-bottom: 12px;
         }
 
         .section-subtitle {
             color: #888;
-            margin-bottom: 40px;
-            font-size: 17px;
+            margin-bottom: 45px;
         }
 
 
@@ -188,10 +195,11 @@
            PROJECT FILTER
         ========================================================= */
 
-        .category-nav {
+        .filter-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+
             margin-bottom: 40px;
         }
 
@@ -200,27 +208,22 @@
             color: #aaa;
 
             border: 1px solid #333;
+            border-radius: 25px;
 
             padding: 10px 18px;
 
-            border-radius: 25px;
-
             cursor: pointer;
 
-            font-size: 14px;
+            font-size: 13px;
 
             transition: 0.3s;
         }
 
-        .filter-btn:hover {
-            color: white;
-            border-color: #777;
-        }
-
+        .filter-btn:hover,
         .filter-btn.active {
-            background: white;
-            color: black;
-            border-color: white;
+            background: #fff;
+            color: #000;
+            border-color: #fff;
         }
 
 
@@ -232,7 +235,7 @@
             display: grid;
 
             grid-template-columns:
-                repeat(2, 1fr);
+                repeat(2, minmax(0, 1fr));
 
             gap: 25px;
         }
@@ -247,15 +250,15 @@
 
             overflow: hidden;
 
+            min-height: 350px;
+
+            background: #111;
+
+            border: 1px solid #222;
+
             border-radius: 15px;
 
-            background: #151518;
-
-            border: 1px solid #242428;
-
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease;
+            transition: 0.3s;
         }
 
         .project:hover {
@@ -263,121 +266,111 @@
             border-color: #444;
         }
 
-        .project img {
-            display: block;
-
+        .project-image {
             width: 100%;
-            height: 420px;
+            height: 300px;
 
             object-fit: cover;
 
-            transition:
-                transform 0.6s ease;
+            background: #151515;
         }
 
-        .project:hover img {
-            transform: scale(1.05);
+        .project-content {
+            padding: 25px;
         }
 
-        .project-info {
-            padding: 22px;
-        }
-
-        .project-category {
+        .project-tag {
             display: inline-block;
 
-            margin-bottom: 8px;
-
-            color: #777;
-
-            font-size: 12px;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-        }
-
-        .project-info h3 {
-            font-size: 23px;
-            margin-bottom: 7px;
-        }
-
-        .project-info p {
             color: #888;
+
+            font-size: 11px;
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+        .project h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .project p {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
 
 
         /* =========================================================
-           PROJECT BUTTONS
+           PROJECT BUTTON
         ========================================================= */
 
-        .project-actions {
-            display: flex;
-
-            gap: 10px;
-
-            flex-wrap: wrap;
-
-            margin-top: 18px;
-        }
-
-        .mini-button {
+        .project-btn {
             display: inline-block;
 
-            padding: 8px 15px;
+            padding: 9px 16px;
 
             border: 1px solid #333;
-
             border-radius: 20px;
-
-            color: #bbb;
 
             font-size: 13px;
 
             transition: 0.3s;
         }
 
-        .mini-button:hover {
-            background: white;
-
-            color: black;
-
-            border-color: white;
+        .project-btn:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
         }
 
 
         /* =========================================================
-           PLACEHOLDER PROJECTS
+           PLACEHOLDER PROJECT
         ========================================================= */
 
-        .placeholder-visual {
-            height: 420px;
-
+        .placeholder {
             display: flex;
-
-            align-items: flex-end;
-
-            padding: 30px;
+            flex-direction: column;
+            justify-content: flex-end;
 
             background:
-                radial-gradient(
-                    circle at 75% 25%,
-                    #38383d 0%,
-                    transparent 30%
-                ),
                 linear-gradient(
                     135deg,
-                    #17171b,
-                    #09090b
+                    #151515,
+                    #090909
                 );
         }
 
-        .placeholder-visual strong {
-            font-size: 42px;
+        .placeholder::before {
+            content: "";
 
-            line-height: 1;
+            position: absolute;
 
-            letter-spacing: -1px;
+            top: 35px;
+            right: 35px;
+
+            width: 100px;
+            height: 100px;
+
+            border: 1px solid #333;
+            border-radius: 50%;
+        }
+
+        .placeholder::after {
+            content: "";
+
+            position: absolute;
+
+            top: 55px;
+            right: 55px;
+
+            width: 60px;
+            height: 60px;
+
+            border: 1px solid #333;
+            border-radius: 50%;
         }
 
 
@@ -394,16 +387,16 @@
            ABOUT
         ========================================================= */
 
-        .about {
-            max-width: 900px;
+        .about-container {
+            max-width: 850px;
         }
 
-        .about p {
+        .about-text {
             color: #aaa;
 
-            font-size: 20px;
+            font-size: 18px;
 
-            margin-bottom: 20px;
+            line-height: 1.9;
         }
 
 
@@ -411,22 +404,28 @@
            SKILLS
         ========================================================= */
 
-        .skills {
+        .skills-grid {
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 12px;
         }
 
         .skill {
+            padding: 11px 18px;
+
             border: 1px solid #333;
+            border-radius: 25px;
 
-            padding: 12px 18px;
+            color: #aaa;
 
-            border-radius: 30px;
+            font-size: 13px;
 
-            color: #bbb;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            color: #fff;
+            border-color: #777;
         }
 
 
@@ -435,21 +434,18 @@
         ========================================================= */
 
         .contact-box {
-            border: 1px solid #29292d;
+            max-width: 800px;
+        }
 
-            border-radius: 20px;
-
-            padding: 50px;
-
-            background: #111114;
+        .contact-box h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
         }
 
         .contact-box p {
-            color: #999;
-
-            margin-bottom: 25px;
-
-            font-size: 18px;
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 17px;
         }
 
 
@@ -458,19 +454,17 @@
         ========================================================= */
 
         footer {
-            padding: 40px 7%;
+            padding: 35px 7%;
 
             border-top: 1px solid #222;
 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
             color: #666;
 
-            display: flex;
-
-            justify-content: space-between;
-
-            flex-wrap: wrap;
-
-            gap: 15px;
+            font-size: 13px;
         }
 
 
@@ -478,57 +472,77 @@
            MOBILE
         ========================================================= */
 
-        @media (max-width: 750px) {
+        @media (max-width: 800px) {
 
             nav {
                 padding: 18px 5%;
             }
 
-            nav ul {
-                gap: 12px;
-
-                font-size: 13px;
+            .nav-links {
+                gap: 15px;
             }
 
-            .hero {
-                padding: 130px 5% 70px;
+            .nav-links a {
+                font-size: 12px;
             }
 
             section {
-                padding: 75px 5%;
+                padding: 80px 5%;
+            }
+
+            .hero {
+                padding: 120px 5% 70px;
             }
 
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
 
-            .project img {
-                height: 300px;
-            }
-
-            .placeholder-visual {
-                height: 300px;
-            }
-
-            .placeholder-visual strong {
-                font-size: 32px;
+            .hero-description {
+                font-size: 16px;
             }
 
             .section-title {
+                font-size: 34px;
+            }
+
+            .contact-box h2 {
                 font-size: 38px;
             }
 
-            .contact-box {
-                padding: 30px;
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .nav-links {
+                display: none;
             }
 
-            footer {
-                padding: 30px 5%;
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .btn {
+                margin-bottom: 10px;
+            }
+
+            .filter-buttons {
+                gap: 7px;
+            }
+
+            .filter-btn {
+                font-size: 12px;
+                padding: 8px 13px;
             }
         }
 
     </style>
-
 </head>
 
 
@@ -542,33 +556,25 @@
 <nav>
 
     <div class="logo">
-        Himanshu<span>.</span>
+        Himanshu Shakya
     </div>
 
-    <ul>
+    <ul class="nav-links">
 
         <li>
-            <a href="#work">
-                Work
-            </a>
+            <a href="#work">Work</a>
         </li>
 
         <li>
-            <a href="#about">
-                About
-            </a>
+            <a href="#about">About</a>
         </li>
 
         <li>
-            <a href="#skills">
-                Skills
-            </a>
+            <a href="#skills">Skills</a>
         </li>
 
         <li>
-            <a href="#contact">
-                Contact
-            </a>
+            <a href="#contact">Contact</a>
         </li>
 
     </ul>
@@ -585,60 +591,30 @@
 
     <div class="hero-content">
 
-        <div class="small-title">
-            3D Artist • Product Designer • BIM • Digital Twin
+        <div class="hero-small">
+            3D Artist • Product Designer
         </div>
-
 
         <h1>
-
             Himanshu<br>
-
-            <span>Shakya</span>
-
+            Shakya
         </h1>
 
-
-        <p>
-
-            3D Artist working across product visualization,
-            chandelier design, BIM/Revit, Digital Twin workflows,
-            Unreal Engine and 3ds Max automation.
-
+        <p class="hero-description">
+            3D Artist specializing in chandelier design,
+            product visualization, architectural visualization,
+            BIM, Digital Twin and Unreal Engine projects.
         </p>
 
+        <a href="#work" class="btn btn-primary">
+            View My Work
+        </a>
 
-        <div class="buttons">
-
-            <a
-                class="button"
-                href="#work">
-
-                View My Work
-
-            </a>
-
-
-            <a
-                class="button"
-                href="https://www.behance.net/himanshushakya16"
-                target="_blank">
-
-                Behance
-
-            </a>
-
-
-            <a
-                class="button"
-                href="https://github.com/Himanshakya"
-                target="_blank">
-
-                GitHub
-
-            </a>
-
-        </div>
+        <a href="https://www.behance.net/himanshushakya16"
+           target="_blank"
+           class="btn">
+            Behance
+        </a>
 
     </div>
 
@@ -652,78 +628,53 @@
 
 <section id="work">
 
-
     <h2 class="section-title">
-
-        My Work
-
+        Selected Work
     </h2>
 
-
     <p class="section-subtitle">
-
-        One portfolio for my 3D design, BIM, Digital Twin,
-        Unreal Engine and 3ds Max work.
-
+        3D design, BIM, Digital Twin, Unreal Engine and 3ds Max projects.
     </p>
 
 
+    <!-- FILTER BUTTONS -->
 
-    <!-- PROJECT FILTER -->
-
-    <div class="category-nav">
+    <div class="filter-buttons">
 
         <button
             class="filter-btn active"
             data-filter="all">
-
             All Projects
-
         </button>
-
 
         <button
             class="filter-btn"
-            data-filter="3d">
-
+            data-filter="portfolio">
             3D Portfolio
-
         </button>
-
 
         <button
             class="filter-btn"
             data-filter="bim">
-
             BIM / Revit
-
         </button>
-
 
         <button
             class="filter-btn"
-            data-filter="twin">
-
+            data-filter="digital-twin">
             Digital Twin
-
         </button>
-
 
         <button
             class="filter-btn"
             data-filter="unreal">
-
-            Unreal Mobile Game
-
+            Unreal Engine Project
         </button>
-
 
         <button
             class="filter-btn"
             data-filter="maxscript">
-
             3ds Max Scripts
-
         </button>
 
     </div>
@@ -735,72 +686,37 @@
     <div class="portfolio-grid">
 
 
-
         <!-- =================================================
-             3D PORTFOLIO
+             3D PORTFOLIO PROJECT 1
         ================================================== -->
 
-
-        <div
-            class="project"
-            data-category="3d">
-
+        <div class="project portfolio">
 
             <img
                 src="chandelier_1.png"
                 alt="Chandelier Design 1"
-                loading="lazy">
+                class="project-image">
 
+            <div class="project-content">
 
-            <div class="project-info">
-
-
-                <span class="project-category">
-
-                    3D Portfolio
-
+                <span class="project-tag">
+                    3D PORTFOLIO
                 </span>
 
-
                 <h3>
-
                     Chandelier Design 01
-
                 </h3>
 
-
                 <p>
-
                     3D Product Design & Visualization
-
                 </p>
 
-
-                <div class="project-actions">
-
-
-                    <a
-                        class="mini-button"
-                        href="https://github.com/Himanshakya/3D-Portfolio"
-                        target="_blank">
-
-                        GitHub
-
-                    </a>
-
-
-                    <a
-                        class="mini-button"
-                        href="https://www.behance.net/himanshushakya16"
-                        target="_blank">
-
-                        Behance
-
-                    </a>
-
-
-                </div>
-
+                <a
+                    href="https://github.com/Himanshakya/3D-Portfolio"
+                    target="_blank"
+                    class="project-btn">
+                    View Project →
+                </a>
 
             </div>
 
@@ -808,66 +724,37 @@
 
 
 
-        <div
-            class="project"
-            data-category="3d">
+        <!-- =================================================
+             3D PORTFOLIO PROJECT 2
+        ================================================== -->
 
+        <div class="project portfolio">
 
             <img
                 src="chandelier_2.png"
                 alt="Chandelier Design 2"
-                loading="lazy">
+                class="project-image">
 
+            <div class="project-content">
 
-            <div class="project-info">
-
-
-                <span class="project-category">
-
-                    3D Portfolio
-
+                <span class="project-tag">
+                    3D PORTFOLIO
                 </span>
 
-
                 <h3>
-
                     Chandelier Design 02
-
                 </h3>
 
-
                 <p>
-
                     Product Visualization
-
                 </p>
 
-
-                <div class="project-actions">
-
-
-                    <a
-                        class="mini-button"
-                        href="https://github.com/Himanshakya/3D-Portfolio"
-                        target="_blank">
-
-                        GitHub
-
-                    </a>
-
-
-                    <a
-                        class="mini-button"
-                        href="https://www.behance.net/himanshushakya16"
-                        target="_blank">
-
-                        Behance
-
-                    </a>
-
-
-                </div>
-
+                <a
+                    href="https://github.com/Himanshakya/3D-Portfolio"
+                    target="_blank"
+                    class="project-btn">
+                    View Project →
+                </a>
 
             </div>
 
@@ -875,66 +762,37 @@
 
 
 
-        <div
-            class="project"
-            data-category="3d">
+        <!-- =================================================
+             3D PORTFOLIO PROJECT 3
+        ================================================== -->
 
+        <div class="project portfolio">
 
             <img
                 src="chandelier_3.png"
                 alt="Chandelier Design 3"
-                loading="lazy">
+                class="project-image">
 
+            <div class="project-content">
 
-            <div class="project-info">
-
-
-                <span class="project-category">
-
-                    3D Portfolio
-
+                <span class="project-tag">
+                    3D PORTFOLIO
                 </span>
 
-
                 <h3>
-
                     Chandelier Design 03
-
                 </h3>
 
-
                 <p>
-
                     3D Modeling & Rendering
-
                 </p>
 
-
-                <div class="project-actions">
-
-
-                    <a
-                        class="mini-button"
-                        href="https://github.com/Himanshakya/3D-Portfolio"
-                        target="_blank">
-
-                        GitHub
-
-                    </a>
-
-
-                    <a
-                        class="mini-button"
-                        href="https://www.behance.net/himanshushakya16"
-                        target="_blank">
-
-                        Behance
-
-                    </a>
-
-
-                </div>
-
+                <a
+                    href="https://github.com/Himanshakya/3D-Portfolio"
+                    target="_blank"
+                    class="project-btn">
+                    View Project →
+                </a>
 
             </div>
 
@@ -942,66 +800,37 @@
 
 
 
-        <div
-            class="project"
-            data-category="3d">
+        <!-- =================================================
+             3D PORTFOLIO PROJECT 4
+        ================================================== -->
 
+        <div class="project portfolio">
 
             <img
                 src="chandelier_4.png"
                 alt="Chandelier Design 4"
-                loading="lazy">
+                class="project-image">
 
+            <div class="project-content">
 
-            <div class="project-info">
-
-
-                <span class="project-category">
-
-                    3D Portfolio
-
+                <span class="project-tag">
+                    3D PORTFOLIO
                 </span>
 
-
                 <h3>
-
                     Chandelier Design 04
-
                 </h3>
 
-
                 <p>
-
                     Lighting Product Visualization
-
                 </p>
 
-
-                <div class="project-actions">
-
-
-                    <a
-                        class="mini-button"
-                        href="https://github.com/Himanshakya/3D-Portfolio"
-                        target="_blank">
-
-                        GitHub
-
-                    </a>
-
-
-                    <a
-                        class="mini-button"
-                        href="https://www.behance.net/himanshushakya16"
-                        target="_blank">
-
-                        Behance
-
-                    </a>
-
-
-                </div>
-
+                <a
+                    href="https://github.com/Himanshakya/3D-Portfolio"
+                    target="_blank"
+                    class="project-btn">
+                    View Project →
+                </a>
 
             </div>
 
@@ -1013,64 +842,29 @@
              BIM / REVIT
         ================================================== -->
 
+        <div class="project bim placeholder">
 
-        <div
-            class="project"
-            data-category="bim">
+            <div class="project-content">
 
-
-            <div class="placeholder-visual">
-
-                <strong>
-
-                    BIM<br>
-                    / REVIT
-
-                </strong>
-
-            </div>
-
-
-            <div class="project-info">
-
-
-                <span class="project-category">
-
-                    BIM / Revit Projects
-
+                <span class="project-tag">
+                    BIM / REVIT
                 </span>
 
-
                 <h3>
-
-                    Architecture & BIM
-
+                    BIM / Revit Projects
                 </h3>
 
-
                 <p>
-
-                    Revit modeling, BIM coordination,
-                    architectural projects and drawings.
-
+                    Building Information Modeling,
+                    Revit projects and architectural workflows.
                 </p>
 
-
-                <div class="project-actions">
-
-
-                    <a
-                        class="mini-button"
-                        href="https://github.com/Himanshakya/BIM-Revit-Projects"
-                        target="_blank">
-
-                        GitHub
-
-                    </a>
-
-
-                </div>
-
+                <a
+                    href="https://github.com/Himanshakya/BIM-Revit-Projects"
+                    target="_blank"
+                    class="project-btn">
+                    View Project →
+                </a>
 
             </div>
 
@@ -1082,64 +876,29 @@
              DIGITAL TWIN
         ================================================== -->
 
+        <div class="project digital-twin placeholder">
 
-        <div
-            class="project"
-            data-category="twin">
+            <div class="project-content">
 
-
-            <div class="placeholder-visual">
-
-                <strong>
-
-                    DIGITAL<br>
-                    TWIN
-
-                </strong>
-
-            </div>
-
-
-            <div class="project-info">
-
-
-                <span class="project-category">
-
-                    Digital Twin Projects
-
+                <span class="project-tag">
+                    DIGITAL TWIN
                 </span>
 
-
                 <h3>
-
-                    Digital Twin & iTwin
-
+                    Digital Twin Projects
                 </h3>
 
-
                 <p>
-
-                    Digital Twin concepts, iTwin workflows,
-                    3D models and connected project data.
-
+                    Digital Twin concepts,
+                    iTwin platform and connected 3D workflows.
                 </p>
 
-
-                <div class="project-actions">
-
-
-                    <a
-                        class="mini-button"
-                        href="https://github.com/Himanshakya/Digital-Twin-Projects"
-                        target="_blank">
-
-                        GitHub
-
-                    </a>
-
-
-                </div>
-
+                <a
+                    href="https://github.com/Himanshakya/Digital-Twin-Projects"
+                    target="_blank"
+                    class="project-btn">
+                    View Project →
+                </a>
 
             </div>
 
@@ -1148,67 +907,32 @@
 
 
         <!-- =================================================
-             UNREAL MOBILE GAME
+             UNREAL ENGINE
         ================================================== -->
 
+        <div class="project unreal placeholder">
 
-        <div
-            class="project"
-            data-category="unreal">
+            <div class="project-content">
 
-
-            <div class="placeholder-visual">
-
-                <strong>
-
-                    UNREAL<br>
-                    ENGINE
-
-                </strong>
-
-            </div>
-
-
-            <div class="project-info">
-
-
-                <span class="project-category">
-
-                    Unreal Mobile Game
-
+                <span class="project-tag">
+                    UNREAL ENGINE
                 </span>
 
-
                 <h3>
-
-                    3D Exploration Game
-
+                    Unreal Engine Project
                 </h3>
 
-
                 <p>
-
-                    Roads, bridges, buildings, vehicles
-                    and an explorable 3D mobile game world.
-
+                    Real-time 3D environment,
+                    interactive visualization and Unreal Engine work.
                 </p>
 
-
-                <div class="project-actions">
-
-
-                    <a
-                        class="mini-button"
-                        href="https://github.com/Himanshakya/Unreal-Mobile-Game"
-                        target="_blank">
-
-                        GitHub
-
-                    </a>
-
-
-                </div>
-
+                <a
+                    href="https://github.com/Himanshakya/Unreal-Engine-Project"
+                    target="_blank"
+                    class="project-btn">
+                    View Project →
+                </a>
 
             </div>
 
@@ -1220,70 +944,33 @@
              3DS MAX SCRIPTS
         ================================================== -->
 
+        <div class="project maxscript placeholder">
 
-        <div
-            class="project"
-            data-category="maxscript">
+            <div class="project-content">
 
-
-            <div class="placeholder-visual">
-
-                <strong>
-
-                    3DS MAX<br>
-                    SCRIPTS
-
-                </strong>
-
-            </div>
-
-
-            <div class="project-info">
-
-
-                <span class="project-category">
-
-                    3ds Max Scripts
-
+                <span class="project-tag">
+                    3DS MAX SCRIPTS
                 </span>
 
-
                 <h3>
-
-                    MaxScript Automation
-
+                    3ds Max Scripts
                 </h3>
 
-
                 <p>
-
-                    Tools for modeling automation,
-                    pipe running length, detach,
-                    grouping and workflow improvements.
-
+                    MaxScript tools and automation
+                    for 3D modeling and visualization workflows.
                 </p>
 
-
-                <div class="project-actions">
-
-
-                    <a
-                        class="mini-button"
-                        href="https://github.com/Himanshakya/3ds-Max-Scripts"
-                        target="_blank">
-
-                        GitHub
-
-                    </a>
-
-
-                </div>
-
+                <a
+                    href="https://github.com/Himanshakya/3ds-Max-Scripts"
+                    target="_blank"
+                    class="project-btn">
+                    View Project →
+                </a>
 
             </div>
 
         </div>
-
 
 
     </div>
@@ -1298,42 +985,25 @@
 
 <section id="about">
 
-
-    <div class="about">
-
+    <div class="about-container">
 
         <h2 class="section-title">
-
             About Me
-
         </h2>
 
-
-        <p>
+        <p class="about-text">
 
             I am a 3D Artist and Product Designer focused on
             creating high-quality 3D models, product visuals,
             chandelier designs and architectural environments.
 
-        </p>
-
-
-        <p>
+            <br><br>
 
             My workflow combines 3D modeling, realistic materials,
-            lighting and rendering to create presentation-ready
-            visualizations.
+            lighting, rendering, BIM workflows, Digital Twin
+            technologies and real-time visualization.
 
         </p>
-
-
-        <p>
-
-            I am also exploring BIM/Revit, Digital Twin workflows,
-            Unreal Engine and 3ds Max automation.
-
-        </p>
-
 
     </div>
 
@@ -1347,103 +1017,80 @@
 
 <section id="skills">
 
-
     <h2 class="section-title">
-
         Skills
-
     </h2>
 
-
     <p class="section-subtitle">
-
-        Tools and areas I work with.
-
+        Software, technologies and design skills.
     </p>
 
 
-    <div class="skills">
-
+    <div class="skills-grid">
 
         <div class="skill">
             3ds Max
         </div>
 
-
         <div class="skill">
             V-Ray
         </div>
-
 
         <div class="skill">
             Corona Renderer
         </div>
 
-
         <div class="skill">
             D5 Render
         </div>
-
 
         <div class="skill">
             Unreal Engine
         </div>
 
-
         <div class="skill">
             AutoCAD
         </div>
-
 
         <div class="skill">
             Revit
         </div>
 
-
         <div class="skill">
             BIM
         </div>
-
 
         <div class="skill">
             Digital Twin
         </div>
 
-
         <div class="skill">
             iTwin
         </div>
-
 
         <div class="skill">
             MaxScript
         </div>
 
-
         <div class="skill">
             3D Modeling
         </div>
-
 
         <div class="skill">
             Product Design
         </div>
 
-
         <div class="skill">
             Chandelier Design
         </div>
-
 
         <div class="skill">
             Architectural Visualization
         </div>
 
-
         <div class="skill">
             Interior Visualization
         </div>
-
 
     </div>
 
@@ -1457,60 +1104,38 @@
 
 <section id="contact">
 
-
     <div class="contact-box">
 
-
-        <h2 class="section-title">
-
+        <h2>
             Let's Work Together
-
         </h2>
 
-
         <p>
-
-            Interested in 3D design, BIM/Revit,
-            Digital Twin, Unreal Engine or
-            3ds Max automation?
-
+            Interested in 3D product design,
+            chandelier visualization,
+            BIM, Digital Twin or Unreal Engine projects?
+            Let's connect.
         </p>
 
+        <a
+            href="mailto:Himanshakya9849@gmail.com"
+            class="btn btn-primary">
+            Email Me
+        </a>
 
-        <div class="buttons">
+        <a
+            href="https://www.behance.net/himanshushakya16"
+            target="_blank"
+            class="btn">
+            Behance
+        </a>
 
-
-            <a
-                class="button"
-                href="https://www.behance.net/himanshushakya16"
-                target="_blank">
-
-                View Behance
-
-            </a>
-
-
-            <a
-                class="button"
-                href="https://github.com/Himanshakya"
-                target="_blank">
-
-                GitHub
-
-            </a>
-
-
-            <a
-                class="button"
-                href="mailto:Himanshakya9849@gmail.com">
-
-                Email Me
-
-            </a>
-
-
-        </div>
-
+        <a
+            href="https://github.com/Himanshakya"
+            target="_blank"
+            class="btn">
+            GitHub
+        </a>
 
     </div>
 
@@ -1524,27 +1149,20 @@
 
 <footer>
 
-
     <div>
-
         © 2026 Himanshu Shakya
-
     </div>
-
 
     <div>
-
-        3D Artist • BIM • Digital Twin • Unreal Engine
-
+        3D Artist • Product Designer
     </div>
-
 
 </footer>
 
 
 
 <!-- =========================================================
-     FILTER JAVASCRIPT
+     JAVASCRIPT
 ========================================================= -->
 
 <script>
@@ -1560,22 +1178,19 @@
 
         button.addEventListener("click", () => {
 
-
             /* Remove active from all buttons */
 
             filterButtons.forEach(btn => {
-
                 btn.classList.remove("active");
-
             });
 
 
-            /* Activate clicked button */
+            /* Add active to clicked button */
 
             button.classList.add("active");
 
 
-            /* Get selected category */
+            /* Get selected filter */
 
             const filter =
                 button.getAttribute("data-filter");
@@ -1585,14 +1200,12 @@
 
             projects.forEach(project => {
 
+                if (filter === "all") {
 
-                const category =
-                    project.getAttribute("data-category");
+                    project.classList.remove("hidden");
 
-
-                if (
-                    filter === "all" ||
-                    category === filter
+                } else if (
+                    project.classList.contains(filter)
                 ) {
 
                     project.classList.remove("hidden");
@@ -1613,5 +1226,4 @@
 
 
 </body>
-
 </html>
